@@ -39,59 +39,63 @@ class MeuApp extends StatelessWidget {
                   fontFamily: 'Source Code Pro',
                 ),
               ),
-              SizedBox(
-                height: 50.0,
-                width: 250.0,
-                child: Divider(
-                  color: Colors.black,
-                ),
-              ),
-              Card(
+              Container(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
+                  vertical: 10.0, 
                   horizontal: 25.0,
                 ),
-                // padding: EdgeInsets.all(10.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.phone,
-                    size: 25.0,
-                    color: Colors.lightBlue,
-                  ),
-                  title: Text(
-                    '+55 1234 2345',
-                    style: TextStyle(
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      size: 25.0,
                       color: Colors.lightBlue,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
                     ),
-                  ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+55 1234 2345',
+                      style: TextStyle(
+                        color: Colors.lightBlue,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                      ),
+                    )
+                  ],
                 ),
               ),
-              Card(
+              Container(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
+                  vertical: 10.0, 
                   horizontal: 25.0,
                 ),
-                // padding: EdgeInsets.all(10.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.email,
-                    size: 25.0,
-                    color: Colors.lightBlue,
-                  ),
-                  title: Text(
-                    'email@email.com',
-                    style: TextStyle(
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      size: 25.0,
                       color: Colors.lightBlue,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
                     ),
-                  ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '',
+                      style: TextStyle(
+                        color: Colors.lightBlue,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                      ),
+                    )
+                  ],
                 ),
-              )
+              ),
+              
             ],
           ),
         ),
