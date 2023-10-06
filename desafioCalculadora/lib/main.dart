@@ -9,10 +9,28 @@ import 'package:flutter/material.dart';
 //TODO - 4: Crie um novo Container, que receberá um column, que por sua vez receberá vários rows, que por sua vez receberão vários raisedbuttons para criar os botões da nossa calculadora. A calculadora deve ficar com o visual similar ao da imagem apresentada em: https://drive.google.com/file/d/1fuKl3cdlr1J-PsLLmKtStvgeHiaeahO6/view?usp=sharing. Dicas: pesquisem no flutter.dev pelas classes/widgets: 'Expanded' e 'RaisedButton'; As cores podem ser diferentes para os botões, fica a seu critério, porém, a estrutura dos botões deve ser a mesma apresentada na imagem.
 
 void main() {
-  runApp(MeuApp());
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        body: Calculadora(),
+      ),
+    ),
+  );
 }
 
-class MeuApp extends StatelessWidget {
+class Calculadora extends StatefulWidget {
+  
+
+  @override
+  _CalculadoraState createState() => _CalculadoraState();
+}
+
+class _CalculadoraState extends State<Calculadora> {
+
+  dynamic numeroAtual = 1;
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,7 +50,7 @@ class MeuApp extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 40.0),
                 alignment: Alignment.center,
                 child: Text(
-                  'Visor',
+                  '${numeroAtual}',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 50),
                 ),
@@ -47,7 +65,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = 'C';
+                            });
+                          },
                           child: Text(
                             'C',
                             style: TextStyle(
@@ -61,7 +83,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = 'DEL';
+                            });
+                          },
                           child: Text(
                             'DEL',
                             style: TextStyle(
@@ -75,7 +101,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '%';
+                            });
+                          },
                           child: Text(
                             '%',
                             style: TextStyle(
@@ -90,7 +120,11 @@ class MeuApp extends StatelessWidget {
                             minimumSize: Size(double.infinity, 90),
                             
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '/';
+                            });
+                          },
                           child: Text(
                             '/',
                             style: TextStyle(
@@ -107,7 +141,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '7';
+                            });
+                          },
                           child: Text(
                             '7',
                             style: TextStyle(
@@ -121,7 +159,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '8';
+                            });
+                          },
                           child: Text(
                             '8',
                             style: TextStyle(
@@ -135,7 +177,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '9';
+                            });
+                          },
                           child: Text(
                             '9',
                             style: TextStyle(
@@ -150,7 +196,11 @@ class MeuApp extends StatelessWidget {
                             minimumSize: Size(double.infinity, 90),
                             
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '*';
+                            });
+                          },
                           child: Text(
                             '*',
                             style: TextStyle(
@@ -169,7 +219,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '4';
+                            });
+                          },
                           child: Text(
                             '4',
                             style: TextStyle(
@@ -183,7 +237,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '5';
+                            });
+                          },
                           child: Text(
                             '5',
                             style: TextStyle(
@@ -197,7 +255,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '6';
+                            });
+                          },
                           child: Text(
                             '6',
                             style: TextStyle(
@@ -212,7 +274,11 @@ class MeuApp extends StatelessWidget {
                             minimumSize: Size(double.infinity, 90),
                             
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '+';
+                            });
+                          },
                           child: Text(
                             '+',
                             style: TextStyle(
@@ -231,7 +297,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '1';
+                            });
+                          },
                           child: Text(
                             '1',
                             style: TextStyle(
@@ -245,7 +315,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '2';
+                            });
+                          },
                           child: Text(
                             '2',
                             style: TextStyle(
@@ -259,7 +333,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '3';
+                            });
+                          },
                           child: Text(
                             '3',
                             style: TextStyle(
@@ -274,7 +352,11 @@ class MeuApp extends StatelessWidget {
                             minimumSize: Size(double.infinity, 90),
                             
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '-';
+                            });
+                          },
                           child: Text(
                             '-',
                             style: TextStyle(
@@ -293,7 +375,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '0';
+                            });
+                          },
                           child: Text(
                             '0',
                             style: TextStyle(
@@ -307,7 +393,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '.';
+                            });
+                          },
                           child: Text(
                             '.',
                             style: TextStyle(
@@ -321,7 +411,11 @@ class MeuApp extends StatelessWidget {
                             backgroundColor: Colors.black,
                             minimumSize: Size(double.infinity, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              numeroAtual = '=';
+                            });
+                          },
                           child: Text(
                             '=',
                             style: TextStyle(
@@ -341,3 +435,5 @@ class MeuApp extends StatelessWidget {
     );
   }
 }
+
+
